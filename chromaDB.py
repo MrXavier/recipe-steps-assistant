@@ -37,12 +37,13 @@ collection.add(
     ids=ids
 )
 while True:
+  n:int = input("How many results: ")
   query = input("Enter your query: ")
   if query == "quit":
     break
   results = collection.query(
       query_texts=[query], 
-      n_results=2 # how many results to return
+      n_results=int(n) # how many results to return
   )
   print(results)
   links = [metadata[0]['imageLink'] for metadata in results['metadatas']]
