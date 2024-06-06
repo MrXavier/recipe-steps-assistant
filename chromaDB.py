@@ -41,10 +41,6 @@ while True:
   if query == "quit":
     break
   results = collection.query(
-      # query_texts=["This is a query is for hawaii fruits"], # Chroma will embed this for you
-      # query_texts=["This is a document about pinapple"],
-      # query_texts=["The moon is the only natural satellite of the Earth."], 
-      # query_texts=["Slice potatoes and put into oven."], 
       query_texts=[query], 
       n_results=2 # how many results to return
   )
